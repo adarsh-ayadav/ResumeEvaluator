@@ -80,7 +80,7 @@ class Resume(BaseModel):
     email: str
     phone: str | None = None
     skills: list[str] = []
-    education: list[str] = []  # LLM ko hum simple list of strings bhejne ko bolenge
+    education: list[str] = []  
     experience: list[Experience] = []
 
 resume_folder = Path("resumes")
