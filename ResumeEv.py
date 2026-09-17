@@ -86,11 +86,12 @@ class Resume(BaseModel):
 resume_folder = Path("resumes")
 result = []
 
-if not resume_folder.exists(): #check if the folder exists or not
+if not resume_folder.exists(): 
+ 
     print("Folder 'resumes' nahi mila!")
 else:
-    for file in resume_folder.iterdir():#in the folder iterate through all the files
-        if file.suffix.lower() in ['.pdf','.docx']:#check if the file is pdf or docx
+    for file in resume_folder.iterdir():
+        if file.suffix.lower() in ['.pdf','.docx']:
             # print(f"Processing file: {file.name}")
             resume_text = read_resume(file)
             resume_prompt = f"""
